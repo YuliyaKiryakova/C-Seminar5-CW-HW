@@ -20,7 +20,8 @@ void FillArray(double[] array, int min, int max)
     Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
         array[i] = rnd.Next(min, max) + Math.Round(rnd.NextDouble(), 2);
-    //array[i] = Math.Round(rnd.NextDouble() * (max - min) + min, 2);
+    // array[i] = Math.Round(rnd.NextDouble() * (max - min) + min, 2);
+    // array[i] = Math.Round((rnd.NextDouble() - 0.5) * 2 * deviation, 2); int deviation = 100 например
 }
 
 string PrintArray(double[] array)
@@ -30,6 +31,26 @@ string PrintArray(double[] array)
         res += array[i] + " ";
     return res;
 }
+
+// double Diff (double[] array)
+// {
+//     double max = array[0];
+//     double min = array[0];
+//     for (int i = 1; i < array.Length; i++)
+//     {
+//         if (array[i] > max) max = array[i];
+//         else if (array[i] < min) min = array[i];
+//     }
+//     return Math.Round(max - min, 2);
+// }
+
+// int pos = InputNum("Введите размер массива: ");
+// double[] myArray = CraeteArray(pos);
+// FillArray(myArray);
+// PrintArray(myArray);
+
+// double difference = Diff(myArray);
+// Console.WriteLine(difference);
 
 double Max(double[] array)
 {
